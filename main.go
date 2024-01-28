@@ -93,7 +93,7 @@ func main() {
 	TextToSend = cfgIni.Section("Common").Key("last_send").String()
 
 	wnd := nucular.NewMasterWindow(0, "DevTerminal 2.00", updatefn)
-	wnd.SetStyle(style.FromTheme(style.DarkTheme, 1.0))
+	wnd.SetStyle(style.FromTheme(style.DarkTheme, 2.0))
 	wnd.Main()
 }
 
@@ -372,7 +372,7 @@ func logList(w *nucular.Window) {
 			recenter = true
 		}
 	}
-	w.Row(w.Bounds.H - 145).Dynamic(1)
+	w.Row((w.Bounds.H / 2) - 145).Dynamic(1)
 	if gl, w := nucular.GroupListStart(w, N, "list", nucular.WindowNoHScrollbar); w != nil {
 
 		if TextOpenDisabled {
