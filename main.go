@@ -92,7 +92,7 @@ func main() {
 	SelectedTerminalPortTypeIdInt32 = int(intval2)
 	TextToSend = cfgIni.Section("Common").Key("last_send").String()
 
-	wnd := nucular.NewMasterWindow(0, "DevTerminal 2.00", updatefn)
+	wnd := nucular.NewMasterWindow(0, "DevTerminal 2.01", updatefn)
 	wnd.SetStyle(style.FromTheme(style.DarkTheme, 2.0))
 	wnd.Main()
 }
